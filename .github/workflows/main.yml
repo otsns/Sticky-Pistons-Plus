@@ -10,13 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - uses: vimtor/action-zip@v1.2
-      with:
-        files: assets/ pack.mcmeta pack.png
-        dest: Sticky Pistons Plus.zip
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: artifact
-        path: ${{ github.workspace }}/Sticky Pistons Plus.zip
+        files: assets/ pack.mcmeta pack.png
+        name: Sticky Pistons Plus
+        path: ${{ github.workspace }}
