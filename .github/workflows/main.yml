@@ -1,0 +1,22 @@
+name: Create Zip Archive with Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Zip Files
+      uses: vimtor/action-zip@v1.2 # Use the action-zip from the marketplace
+      with:
+        files: |
+          ./assets/
+          ./pack.mcmeta
+          ./pack.png
+        dest: Sticky Pistons Plus.zip
