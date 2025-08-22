@@ -20,3 +20,8 @@ jobs:
           ./pack.mcmeta
           ./pack.png
         dest: Sticky Pistons Plus.zip
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Sticky Pistons Plus
+        path: build/libs/*.zip
