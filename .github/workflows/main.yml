@@ -8,11 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        files: assets/ pack.mcmeta pack.png
-        name: Sticky Pistons Plus
-        path: ${{ github.workspace }}
+      - uses: actions/checkout@v4
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sticky Pistons Plus
+          path: |
+            ${{ github.workspace }}/pack.mcmeta
+            pack.png
+            assets/
