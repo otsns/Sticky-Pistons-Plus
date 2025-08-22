@@ -24,4 +24,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Sticky Pistons Plus
-        path: build/libs/*.zip
+        path: Sticky Pistons Plus.zip
