@@ -1,4 +1,4 @@
-name: Create Zip Archive with Action
+name: Upload files to artifacts
 
 on:
   push:
@@ -15,6 +15,7 @@ jobs:
         with:
           name: Sticky Pistons Plus
           path: |
+            ${{ github.workspace }}/assets/
             ${{ github.workspace }}/pack.mcmeta
-            pack.png
-            assets/
+            ${{ github.workspace }}/pack.png
+
