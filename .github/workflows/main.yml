@@ -11,17 +11,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
-    - name: Zip Files
-      uses: vimtor/action-zip@v1.2 # Use the action-zip from the marketplace
+    - uses: vimtor/action-zip@v1.2
       with:
-        files: |
-          ./assets/
-          ./pack.mcmeta
-          ./pack.png
+        files: assets/ pack.mcmeta pack.png
         dest: Sticky Pistons Plus.zip
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Sticky Pistons Plus
-        path: Sticky Pistons Plus.zip
+        name: Sticky Pistons Plus.zip
+        path: /
